@@ -3,10 +3,9 @@ services:
   - type: web
     name: labokeb-api
     env: node
-    plan: free
-    rootDir: backend
     buildCommand: npm install
     startCommand: npm start
+    rootDir: backend
     envVars:
       - key: NODE_ENV
         value: production
@@ -23,7 +22,6 @@ services:
   - type: web
     name: labokeb
     env: static
-    plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
@@ -39,4 +37,3 @@ databases:
   - name: labokeb-db
     databaseName: labokeb
     user: labokeb
-    plan: free
