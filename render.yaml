@@ -1,5 +1,4 @@
 services:
-  # Backend API
   - type: web
     name: labokeb-api
     env: node
@@ -18,7 +17,6 @@ services:
           name: labokeb-db
           property: connectionString
 
-  # Frontend
   - type: web
     name: labokeb
     env: static
